@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cursos</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="'/iniciarclase'">Iniciar Clase<ion-icon name="chevron-forward-outline"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button [routerLink]="'/menudocente'">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Menú</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+  <table>
+    <tr>
+      <th colspan="2">Asignaturas</th>
+    </tr>
+    <tr>
+      <td>Programación De Aplicaciones Móviles_001D</td>
+      <td>
+        <ion-button class="boton" (click)="alertaArquitectura()" matRipple [matRippleCentered]="false"
+          [matRippleRadius]="30" [matRippleColor]="'#8ca1c965'">Información<ion-icon name="chatbubbles-outline">
+          </ion-icon>
+        </ion-button>
+      </td>
+    </tr>
+    <tr>
+      <td>Programación De Aplicaciones Móviles_002D</td>
+      <td>
+        <ion-button class="boton" (click)="alertaCalidad()" matRipple [matRippleCentered]="false" [matRippleRadius]="30"
+          [matRippleColor]="'#8ca1c965'">Información<ion-icon name="chatbubbles-outline"></ion-icon>
+        </ion-button>
+      </td>
+    </tr>
+    <tr>
+      <td>BPM_001D</td>
+      <td>
+        <ion-button class="boton" (click)="alertaEstadistica()" matRipple [matRippleCentered]="false"
+          [matRippleRadius]="30" [matRippleColor]="'#8ca1c965'">Información<ion-icon name="chatbubbles-outline">
+          </ion-icon>
+        </ion-button>
+      </td>
+    </tr>
+    <tr>
+      <td>BPM_002D</td>
+      <td>
+        <ion-button class="boton" (click)="alertaIngles()" matRipple [matRippleCentered]="false" [matRippleRadius]="30"
+          [matRippleColor]="'#8ca1c965'">Información<ion-icon name="chatbubbles-outline"></ion-icon>
+        </ion-button>
+      </td>
+    </tr>
+    <tr>
+      <td>Proceso de Portafolio 4_001D</td>
+      <td>
+        <ion-button class="boton" (click)="alertaPortafolio4()" matRipple [matRippleCentered]="false"
+          [matRippleRadius]="30" [matRippleColor]="'#8ca1c965'">Información<ion-icon name="chatbubbles-outline">
+          </ion-icon>
+        </ion-button>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+    </tr>
+  </table>
+</ion-content>

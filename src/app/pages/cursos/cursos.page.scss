@@ -1,0 +1,28 @@
+ion-content {
+  --ion-background-color: #E1EAF9 !important;
+}
+
+  
+  ion-item {
+    --background: none;
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  .boton{
+    --ion-color-primary: #215AB7;
+  
+  }

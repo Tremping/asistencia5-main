@@ -1,0 +1,36 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="no-scroll">
+  <ion-card class=ion-no-margin>
+    <img src="assets/images/header.png">
+    <ion-card-header>
+      <ion-card-title><img src="assets/images/BellEducaLogo.PNG" class="logo"></ion-card-title>
+      <ion-card-subtitle>"Es necesario aprender lo que necesitamos y no únicamente lo que queremos".</ion-card-subtitle>
+    </ion-card-header>
+    <ion-item>
+      <ion-label position="floating"> Usuario </ion-label>
+      <ion-input [(ngModel)]="login.nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating"> Contraseña </ion-label>
+      <ion-input type="password" [(ngModel)]="login.clave"></ion-input>
+    </ion-item>
+    <ion-card-content>
+      <div class="BTNregistro">
+        <ion-button fill="solid" shape="round" class="login" (click)="ingresar()" matRipple
+          [matRippleCentered]="false" [matRippleRadius]="75" [matRippleColor]="'#8ca1c965'">Iniciar sesión </ion-button>
+        <ion-button fill="solid" shape="round" class="login" matRipple
+          [matRippleCentered]="false" [matRippleRadius]="75" [routerLink]="'/menudocente'" [matRippleColor]="'#8ca1c965'">Docente </ion-button>
+      </div>
+      <div class="recuContra">
+        <ion-button fill="none" [routerLink]="'/recuperacion'" matRipple [matRippleCentered]="false"
+          [matRippleRadius]="75" [matRippleColor]="'#8ca1c965'"><span>¿Olvidaste tu contraseña?</span></ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

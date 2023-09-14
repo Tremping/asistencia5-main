@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Bienvenido, {{ u }} {{ id_u }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+        <div matRipple [matRippleCentered]="false" [matRippleRadius]="30" [matRippleColor]="'#8ca1c965'">
+          <ion-button class="boton" [routerLink]="['/horario']">
+            <ion-icon name="time-outline" class="icono"></ion-icon> Horario
+          </ion-button>
+        </div>
+      </ion-col>
+      <ion-col col-4>
+        <div matRipple [matRippleCentered]="false" [matRippleRadius]="30" [matRippleColor]="'#8ca1c965'">
+          <ion-button class="boton" [routerLink]="['/asistencia']">
+            <ion-icon name="calendar-outline" class="icono"></ion-icon> Asistencia
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+        <div matRipple [matRippleCentered]="false" [matRippleRadius]="30" [matRippleColor]="'#8ca1c965'">
+          <ion-button class="boton" [routerLink]="['/cursos']">
+            <ion-icon name="book-outline" class="icono"></ion-icon> Cursos
+          </ion-button>
+        </div>
+      </ion-col>
+      <ion-col col-4>
+        <div matRipple [matRippleCentered]="false" [matRippleRadius]="30" [matRippleColor]="'#8ca1c965'">
+          <ion-button class="boton" [routerLink]="['/certificado']">
+            <ion-icon name="mail-outline" class="icono"></ion-icon> Certificados
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+        <div matRipple [matRippleCentered]="false" [matRippleRadius]="30" [matRippleColor]="'#8ca1c965'">
+          <ion-button class="boton" disabled>
+            <ion-icon name="megaphone-outline" class="icono"></ion-icon> Anuncios
+          </ion-button>
+        </div>
+      </ion-col>
+      <ion-col col-4>
+        <div matRipple [matRippleCentered]="false" [matRippleRadius]="30" [matRippleColor]="'#8ca1c965'">
+          <ion-button class="boton" disabled>
+            <ion-icon name="chatbubbles-outline" class="icono"></ion-icon> Mensajes
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

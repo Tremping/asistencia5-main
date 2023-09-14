@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Certificados</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button [routerLink]="'/menu'">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Menú</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+  <ion-accordion-group matRipple [matRippleCentered]="false"
+  [matRippleRadius]="30" [matRippleColor]="'#8ca1c965'">
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>Certificado de Alumno Regular</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-item>
+          <ion-label position="floating">Enviar a mi correo:</ion-label>
+          <ion-input placeholder="nombre@belleduca.cl"></ion-input>
+        </ion-item>
+        <ion-button color="primary" (click)="openSnackBar('Documento enviado a tu correo', 'Cerrar')">Enviar</ion-button>
+       <ion-button color="primary">Ver PDF</ion-button>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header">
+        <ion-label>Certificado (Módulo)</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-item>
+          <ion-label position="floating">Enviar a mi correo:</ion-label>
+          <ion-input placeholder="nombre@belleduca.cl"></ion-input>
+        </ion-item>
+       <ion-button color="primary" (click)="openSnackBar('Documento enviado a tu correo', 'Cerrar')">Enviar</ion-button>
+       <ion-button color="primary">Ver PDF</ion-button>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>Certificado Académico de Notas</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-item>
+          <ion-label position="floating">Enviar a mi correo:</ion-label>
+          <ion-input placeholder="nombre@belleduca.cl"></ion-input>
+        </ion-item>
+        <ion-button color="primary" (click)="openSnackBar('Documento enviado a tu correo', 'Cerrar')">Enviar</ion-button>
+       <ion-button color="primary">Ver PDF</ion-button>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+</ion-content>

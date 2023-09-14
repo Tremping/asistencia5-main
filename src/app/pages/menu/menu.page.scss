@@ -1,0 +1,27 @@
+ion-content {
+  --ion-background-color: #E1EAF9 !important;
+}
+
+ion-item {
+  --background: none;
+}
+
+.boton{
+  --ion-color-primary: #215AB7;
+  width: 135px;
+  margin: 5px;
+  text-align: center;
+  font-weight: 200;
+  font-size: 13.5px;
+}
+
+
+div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.icono {
+  min-width: 25px;
+
+}

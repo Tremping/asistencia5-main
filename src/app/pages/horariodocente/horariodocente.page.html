@@ -1,0 +1,141 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Horario
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="'/asistenciadocente'">Asistencia <ion-icon name="chevron-forward-outline"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button [routerLink]="'/menudocente'">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Menú</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+  <ion-accordion-group matRipple [matRippleCentered]="false"
+  [matRippleRadius]="30" [matRippleColor]="'#8ca1c965'">
+    <ion-accordion value="first">
+      <ion-item slot="header"color="light">
+        <ion-label>Lunes</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-item>
+          <ion-label>
+            <h4>Programación De Aplicaciones Móviles_001D</h4>
+            <h4>Hora: 10:01 a 11:20</h4>
+            <h4>Sala: 315</h4>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h4>Programación De Aplicaciones Móviles_001D</h4>
+            <h4>Hora: 11:20 a 12:30</h4>
+            <h4>Sala: 315</h4>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h4>Proceso de Portafolio 4_001D</h4>
+            <h4>Hora: 12:41 a 13:50</h4>
+            <h4>Sala: 605</h4>
+          </ion-label>
+        </ion-item>
+      </div>
+    </ion-accordion>
+
+    <ion-accordion value="second">
+      <ion-item slot="header" >
+        <ion-label>Martes</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-item>
+          <ion-label>
+            <h4>BPM_001D</h4>
+            <h4>Hora: 10:01 a 12:10</h4>
+            <h4>Sala: 510</h4>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h4>BPM_001D</h4>
+            <h4>Hora: 12:20 a 13:40</h4>
+            <h4>Sala: 312</h4>
+          </ion-label>
+        </ion-item>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>Miercoles</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-item>
+          <ion-label>
+            <h4>BPM_002D</h4>
+            <h4>Hora: 08:30 a 09:50</h4>
+            <h4>Sala: 315</h4>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h4>BPM_002D</h4>
+            <h4>Hora: 10:01 a 12:10</h4>
+            <h4>Sala: 315</h4>
+          </ion-label>
+        </ion-item>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="forth">
+      <ion-item slot="header" >
+        <ion-label>Jueves</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-item>
+          <ion-label>
+            <h4>Programación De Aplicaciones Móviles_002D</h4>
+            <h4>Hora: 10:01 a 12:10</h4>
+            <h4>Sala: 315</h4>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h4>Programación De Aplicaciones Móviles_002D</h4>
+            <h4>Hora: 12:20 a 13:40</h4>
+            <h4>Profesor: Julian</h4>
+            <h4>Sala: 315</h4>
+          </ion-label>
+        </ion-item>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="fifth">
+      <ion-item slot="header"color="light">
+        <ion-label>Viernes</ion-label>
+      </ion-item>
+      <div slot="content">
+        <ion-item>
+          <ion-label>
+            <h4>Programación De Aplicaciones Móviles_002D</h4>
+            <h4>Hora: 08:30 a 10:40</h4>
+            <h4>Sala: 600</h4>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h4>Programación De Aplicaciones Móviles_001D</h4>
+            <h4>Hora: 10:50 a 12:50</h4>
+            <h4>Sala: 605</h4>
+          </ion-label>
+        </ion-item>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+</ion-content>

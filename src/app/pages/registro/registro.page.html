@@ -1,0 +1,86 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <!-- <ion-title>registro</ion-title> -->
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="login" text=""></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-color">
+
+  <ion-card class="ion-no-margin">
+
+    <ion-card-header>
+      <ion-card-title>
+        Registro
+      </ion-card-title>
+      <ion-card-subtitle>
+        Crea tu cuenta completando el siguiente formulario
+      </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-contents>
+      <form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
+        <ion-item>
+          <ion-input name="nombre" type="text" placeholder="Nombre Completo" id="nombre" required
+            formControlName="nombre">
+            <ion-icon name="person-outline"></ion-icon>
+          </ion-input>
+        </ion-item>
+        <div *ngIf="contactForm.get('nombre')?.touched && contactForm.get('nombre')?.errors?.['required']">Este campo es
+          obligatorio</div>
+        <div *ngIf="contactForm.get('nombre')?.touched && contactForm.get('nombre')?.errors?.['minlength']">El campo
+          tiene que tener un largo mayor a 3 caracteres</div>
+        <ion-item>
+          <ion-input name="pass" type="password" placeholder="Contraseña" id="pass" required formControlName="pass">
+            <ion-icon name="key-outline"></ion-icon>
+          </ion-input>
+        </ion-item>
+        <div *ngIf="contactForm.get('pass')?.touched && contactForm.get('pass')?.errors?.['required']">Este campo es
+          obligatorio</div>
+        <div *ngIf="contactForm.get('pass')?.touched && contactForm.get('pass')?.errors?.['minlength']">La contraseña
+          tiene que ser mayor a 6 caracteres</div>
+        <ion-item>
+          <ion-input name="pass2" type="password" placeholder="Repita la contraseña" id="pass2" required
+            formControlName="pass2">
+            <ion-icon name="key-outline"></ion-icon>
+          </ion-input>
+        </ion-item>
+        <div *ngIf="contactForm.get('pass2')?.touched && contactForm.get('pass2')?.errors?.['required']">Este campo es
+          obligatorio</div>
+        <div *ngIf="contactForm.get('pass2')?.touched && contactForm.get('pass2')?.errors?.['minlength']">La contraseña
+          tiene que ser mayor a 6 caracteres</div>
+        <ion-item>
+          <ion-input name="telefono" type="number" placeholder="Numero de telefono" id="telefono" required
+            formControlName="telefono">
+            <ion-icon name="call-outline"></ion-icon>
+          </ion-input>
+        </ion-item>
+        <div *ngIf="contactForm.get('telefono')?.touched && contactForm.get('telefono')?.errors?.['required']">Este
+          campo es obligatorio</div>
+        <div *ngIf="contactForm.get('telefono')?.touched && contactForm.get('telefono')?.errors?.['minlength']">Ingrese
+          un número de teléfono válido</div>
+        <ion-item>
+          <ion-input name="email" type="text" placeholder="nombre@belleduca.cl" id="email" required
+            formControlName="email">
+            <ion-icon name="mail-outline"></ion-icon>
+          </ion-input>
+        </ion-item>
+        <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['required']">Este campo es
+          obligatorio</div>
+        <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['email']">Ingrese un correo
+          válido</div>
+        <div class="sign-btn-wrap">
+          <ion-button fill="solid" shape="round" class="recuperar" type="submit" [disabled]="contactForm.invalid"
+            [routerLink]="'/'" (click)="openSnackBar('Ya puedes iniciar sesión','Cerrar')" matRipple [matRippleCentered]="false"
+            [matRippleRadius]="30" [matRippleColor]="'#8ca1c965'">Registrarse </ion-button>
+        </div>
+      </form>
+      <div class="recuContra">
+        <ion-button fill="none" [routerLink]="'/'" matRipple [matRippleCentered]="false" [matRippleRadius]="30"
+          [matRippleColor]="'#8ca1c965'"><span>¿Ya tienes cuenta de usuario?</span></ion-button>
+      </div>
+    </ion-card-contents>
+  </ion-card>
+</ion-content>

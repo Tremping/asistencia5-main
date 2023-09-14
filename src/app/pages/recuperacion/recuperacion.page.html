@@ -1,0 +1,38 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <!-- <ion-title>registro</ion-title> -->
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="login" text=""></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-color">
+
+  <ion-card class="ion-no-margin">
+    
+    <ion-card-header>
+      <ion-card-title>
+        Recuperación     
+      </ion-card-title>
+      <ion-card-subtitle>
+        Un correo será mandado para recuperar tu contraseña.
+      </ion-card-subtitle>
+    </ion-card-header>
+    
+    <ion-card-contents>
+      <form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
+        <ion-item>
+          <ion-input name="email" type="text" placeholder="ejemplo@belleduca.cl" id="email" required formControlName="email">
+            <ion-icon name="mail-outline" ></ion-icon>
+          </ion-input>
+        </ion-item>
+        <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['required']">Este campo es obligatorio</div>
+        <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['email']">Ingrese un correo válido</div>
+        <div class="sign-btn-wrap"> 
+          <ion-button fill="solid" shape="round" class="login" (click)="correo()">Enviar al correo </ion-button>
+        </div>
+      </form>
+    </ion-card-contents>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-app>
+  <ion-menu-toggle auto-hide="false">
+    <ion-menu side="start" menuId="first" contentId="main">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Mi menú</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item [routerLink]="'/perfil'">
+            <ion-icon name="person-circle-outline"></ion-icon>
+            Perfil
+          </ion-item>
+          <ion-item [routerLink]="'/edicion'">
+            <ion-icon name="cog-outline"></ion-icon>
+            Editar Perfil
+          </ion-item>
+          <ion-item [routerLink]="'/'">
+            <ion-icon name="log-out-outline"></ion-icon>
+            Cerrar Sesión
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+  </ion-menu-toggle>
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

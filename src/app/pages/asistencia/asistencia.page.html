@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Asistencia</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="'/cursos'">Cursos <ion-icon name="chevron-forward-outline"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [style.visibility]="content_visibility">
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button [routerLink]="'/menu'">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Menú</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+  <ion-accordion-group matRipple [matRippleCentered]="false"
+  [matRippleRadius]="30" [matRippleColor]="'#8ca1c965'" *ngFor="let ramo of listaRamos">
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>{{ramo.sigla}}-{{ramo.nombre}} : 50%</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-item>
+       <p class="textAsis"> Lunes, 08 de AGOSTO de 2022 <ion-icon name="checkmark-outline"></ion-icon></p>
+      </ion-item>
+    <ion-item>
+       <p class="textAsisIN"> Viernes, 12 de AGOSTO de 2022 <ion-icon name="close-outline"></ion-icon> </p>
+      </ion-item>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+  <ion-button expand="block" class="ion-margin" (click)="startScan()"><ion-icon name="qr-code-outline"></ion-icon>Escanear codigo QR</ion-button>
+  <ion-item *ngIf="resultadoEscan">
+    <ion-label class="ion-text-wrap">
+    {{resultadoEscan}}
+    </ion-label>
+  </ion-item>
+</ion-content>

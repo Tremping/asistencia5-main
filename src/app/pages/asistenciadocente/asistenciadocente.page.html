@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Asistencia</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="'/seccionesdocente'">Cursos <ion-icon name="chevron-forward-outline"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button [routerLink]="'/menudocente'">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Menú</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+  <ion-accordion-group matRipple [matRippleCentered]="false"
+  [matRippleRadius]="30" [matRippleColor]="'#8ca1c965'">
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>Programación De Aplicaciones Móviles_001D</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-item>
+       <p class="textAsis"> Felipe Muñoz Gonzalez: 100%<ion-icon name="checkmark-outline"></ion-icon></p>
+      </ion-item>
+    <ion-item>
+       <p class="textAsisIN"> Alberto Dominguero: 60% <ion-icon name="close-outline"></ion-icon> </p>
+      </ion-item>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" >
+        <ion-label>Programación De Aplicaciones Móviles_002D</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-item>
+        <p style="color:#008000" class="textAsis"> Ramon Soto: 75% <ion-icon name="checkmark-outline"></ion-icon> </p></ion-item>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>Programación De Aplicaciones Móviles_002D</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-item>
+        <p style="color:#008000" class="textAsis"> Juan Antonio Saez: 85% <ion-icon name="checkmark-outline"></ion-icon> </p></ion-item>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="fourth">
+      <ion-item slot="header" >
+        <ion-label>Proceso de Portafolio 4_001D</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-item>
+        <p style="color:#008000" class="textAsis"> Sofia Medina: 100% <ion-icon name="checkmark-outline"></ion-icon> </p></ion-item>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="Fifth">
+      <ion-item slot="header" color="light">
+        <ion-label>BPM_001D</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-item>
+        <p style="color:#008000" class="textAsis">  Samuel Ortiz: 90% <ion-icon name="checkmark-outline"></ion-icon> </p></ion-item>
+        <ion-item>
+        <p style="color:#008000" class="textAsis"> Agustin Bravo: 100% <ion-icon name="checkmark-outline"></ion-icon> </p></ion-item>
+      </div>
+    </ion-accordion>
+    <ion-accordion value="Sixth">
+      <ion-item slot="header" >
+        <ion-label>BPM_002D</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <ion-item>
+        <p style="color:#008000" class="textAsis"> Marcos Pastor: 100% <ion-icon name="checkmark-outline"></ion-icon> </p></ion-item>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+</ion-content>
